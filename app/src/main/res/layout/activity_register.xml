@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/fundocad"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/imageCad"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.055"
+            app:srcCompat="@drawable/ic_user" />
+
+        <View
+            android:id="@+id/view"
+            style="@style/ContainerComponentsCad"
+            android:backgroundTint="#9A040303"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageCad"
+            app:layout_constraintVertical_bias="0.736" />
+
+        <EditText
+            android:id="@+id/edit_User"
+            style="@style/EditTextReg"
+            android:hint="Nome"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/ic_user"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view"
+            />
+
+        <EditText
+            android:id="@+id/edit_CPF"
+            style="@style/EditTextReg"
+            android:textColor="@color/black"
+            android:hint="CPF"
+            android:inputType="number"
+            android:drawableRight="@drawable/ic_group"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_User"
+            />
+
+        <EditText
+            android:id="@+id/edit_Email"
+            style="@style/EditTextReg"
+            android:textColor="@color/black"
+            android:hint="Email"
+            android:drawableRight="@drawable/ic_email"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_CPF"
+            />
+
+        <EditText
+            android:id="@+id/edit_DataDeNascimento"
+            style="@style/EditTextReg"
+            android:textColor="@color/black"
+            android:hint="Data de nascimento"
+            android:drawableRight="@drawable/ic_calendar"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_Email"
+            />
+
+        <EditText
+            android:id="@+id/edit_Endereco"
+            style="@style/EditTextReg"
+            android:textColor="@color/black"
+            android:hint="Endereço"
+            android:drawableRight="@drawable/ic_location"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_DataDeNascimento"
+            />
+
+        <EditText
+            android:id="@+id/edit_Telefone"
+            style="@style/EditTextReg"
+            android:drawableRight="@drawable/ic_call"
+            android:hint="Telefone"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_Endereco" />
+
+        <EditText
+            android:id="@+id/edit_Pas"
+            style="@style/EditTextReg"
+            android:textColor="@color/black"
+            android:hint="Password"
+            android:drawableRight="@drawable/ic_eye"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/edit_Telefone"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/linkCad"
+            android:text="@string/cadastrar"
+            style="@style/ButtonCad"
+            app:layout_constraintTop_toBottomOf="@+id/edit_Pas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:layout_margin="20dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

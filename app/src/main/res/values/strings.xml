@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProjetoPi</string>
+    <string name="login">Login</string>
+    <string name="cadastro">Não é nosso cliente ainda?</string>
+    <string name="cadastrar">Cadastrar!</string>
+
+
+</resources>

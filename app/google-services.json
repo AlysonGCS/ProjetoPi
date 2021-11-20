@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "864348873932",
+    "project_id": "projetopi-ca891",
+    "storage_bucket": "projetopi-ca891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864348873932:android:81ff7aecdf8991ac8f4e69",
+        "android_client_info": {
+          "package_name": "opet.projetopi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864348873932-gti0mi9452ip7eolo6n8jbc6gj9offc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvMBaS-MhzNivnZtdmjC8Se3oIPfUeFGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864348873932-gti0mi9452ip7eolo6n8jbc6gj9offc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
