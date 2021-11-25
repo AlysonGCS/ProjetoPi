@@ -40,4 +40,95 @@
         app:layout_constraintStart_toEndOf="@+id/bemVindo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06" />
+
+    <View
+        android:id="@+id/viewPerfil"
+        style="@style/ContainerComponentsPer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bemVindo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_Email"
+        style="@style/TextViewPerfil"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toTopOf="@+id/viewPerfil" />
+
+    <TextView
+        android:id="@+id/CPF"
+        style="@style/TextViewPerfil"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Email" />
+
+    <TextView
+        android:id="@+id/tv_Endereco"
+        style="@style/TextViewPerfil"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/CPF" />
+
+    <TextView
+        android:id="@+id/tv_Telefone"
+        style="@style/TextViewPerfil"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Endereco" />
+
+    <TextView
+        android:id="@+id/tv_Senha"
+        style="@style/TextViewPerfil"
+        android:inputType="textPassword"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Telefone" />
+
+    <ImageButton
+        android:id="@+id/btn_LogOf"
+        style="@style/ButtonPerf"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Senha"
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageButton
+        android:id="@+id/btn_Delete"
+        style="@style/ButtonPerf"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Senha"
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/Save"
+        style="@style/ButtonPerf"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/viewPerfil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Senha"
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@drawable/ic_save" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

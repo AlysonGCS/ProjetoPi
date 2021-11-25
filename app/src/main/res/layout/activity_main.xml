@@ -37,9 +37,9 @@
         />
 
     <EditText
-        android:id="@+id/edit_User"
+        android:id="@+id/edit_EmailLog"
         style="@style/EditText"
-        android:hint="User"
+        android:hint="Email"
         android:inputType="text"
         android:textColor="@color/black"
         android:drawableRight="@drawable/ic_user"
@@ -51,25 +51,26 @@
     <EditText
         android:id="@+id/edit_Pas"
         style="@style/EditText"
-        android:textColor="@color/black"
-        android:hint="Password"
         android:drawableRight="@drawable/ic_eye"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:onClick="verify"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintTop_toBottomOf="@id/edit_User"
-        />
+        app:layout_constraintTop_toBottomOf="@id/edit_EmailLog" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_log"
+        android:id="@+id/btn_login"
         style="@style/Buttonlogin"
+        android:onClick="verify"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_Pas"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/edit_Pas" />
 
     <ProgressBar
-        android:id="@+id/loading"
+        android:id="@+id/loading_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,13 +81,13 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/linkCad"
+        android:id="@+id/btn_itnCad"
         style="@style/ButtonCadlnk"
         android:onClick="intentCad"
         android:text="@string/cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loading" />
+        app:layout_constraintTop_toBottomOf="@+id/loading_log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

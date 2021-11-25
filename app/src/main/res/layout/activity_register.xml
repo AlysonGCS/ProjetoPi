@@ -37,10 +37,11 @@
             app:layout_constraintVertical_bias="0.676" />
 
         <EditText
-            android:id="@+id/edit_User"
+            android:id="@+id/edit_Name"
             style="@style/EditTextReg"
             android:hint="Nome"
             android:inputType="text"
+            android:maxLength="40"
             android:textColor="@color/black"
             android:drawableRight="@drawable/ic_user"
             app:layout_constraintEnd_toEndOf="@id/view"
@@ -52,20 +53,22 @@
             android:id="@+id/edit_CPF"
             style="@style/EditTextReg"
             android:textColor="@color/black"
-            android:hint="CPF"
+            android:hint="CPF (00000000000)"
+            android:maxLength="11"
             android:inputType="number"
             android:drawableRight="@drawable/ic_group"
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
-            app:layout_constraintTop_toBottomOf="@id/edit_User"
+            app:layout_constraintTop_toBottomOf="@id/edit_Name"
             />
 
         <EditText
-            android:id="@+id/edit_Email"
+            android:id="@+id/edit_EmailLog"
             style="@style/EditTextReg"
             android:textColor="@color/black"
+            android:maxLength="50"
             android:inputType="textEmailAddress"
-            android:hint="Email"
+            android:hint="Email@email.com"
             android:drawableRight="@drawable/ic_email"
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
@@ -73,27 +76,16 @@
             />
 
         <EditText
-            android:id="@+id/edit_DataDeNascimento"
-            style="@style/EditTextReg"
-            android:textColor="@color/black"
-            android:hint="Data de nascimento"
-            android:inputType="date"
-            android:drawableRight="@drawable/ic_calendar"
-            app:layout_constraintEnd_toEndOf="@id/view"
-            app:layout_constraintStart_toStartOf="@id/view"
-            app:layout_constraintTop_toBottomOf="@id/edit_Email"
-            />
-
-        <EditText
             android:id="@+id/edit_Endereco"
             style="@style/EditTextReg"
             android:textColor="@color/black"
             android:inputType="text"
+            android:maxLength="40"
             android:hint="Endereço"
             android:drawableRight="@drawable/ic_location"
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
-            app:layout_constraintTop_toBottomOf="@id/edit_DataDeNascimento"
+            app:layout_constraintTop_toBottomOf="@id/edit_EmailLog"
             />
 
         <EditText
@@ -101,6 +93,7 @@
             style="@style/EditTextReg"
             android:drawableRight="@drawable/ic_call"
             android:hint="Telefone"
+            android:maxLength="15"
             android:textColor="@color/black"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="@id/view"
@@ -111,25 +104,38 @@
             android:id="@+id/edit_Pas"
             style="@style/EditTextReg"
             android:textColor="@color/black"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="Password"
+            android:maxLength="15"
             android:drawableRight="@drawable/ic_eye"
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
-            app:layout_constraintTop_toBottomOf="@id/edit_Telefone"
-            />
+            app:layout_constraintTop_toBottomOf="@id/edit_Telefone" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/linkCad"
-            android:text="@string/cadastrar"
+            android:id="@+id/btn_itnCad"
             style="@style/ButtonCad"
-            app:layout_constraintTop_toBottomOf="@+id/edit_Pas"
+            android:layout_marginTop="12dp"
+            android:onClick="verificar"
+            android:text="@string/cadastrar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/edit_Pas" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Itnlog"
+            style="@style/ButtonCad"
+            android:layout_marginTop="12dp"
+            android:onClick="login"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_itnCad"
+            app:layout_constraintTop_toBottomOf="@+id/edit_Pas" />
 
         <ProgressBar
-            android:id="@+id/loading"
+            android:id="@+id/loading_log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
